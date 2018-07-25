@@ -18,7 +18,7 @@
 // <h> USB Host
 //   <e> USB Host 0
 //     <i> Enable the USB Host 0 functionality
-//     <o1> Controller Interface 
+//     <o1> Controller Interface
 //       <i> Selects the USB Host 0 controller interface
 //       <0=> Custom <1=> OHCI <2=> Custom EHCI for NXP Devices
 //   </e>
@@ -27,7 +27,7 @@
 
 //   <e> USB Host 1
 //     <i> Enable the USB Host 1 functionality
-//     <o1> Controller Interface 
+//     <o1> Controller Interface
 //       <i> Selects the USB Host 1 controller interface
 //       <0=> Custom <1=> OHCI <2=> Custom EHCI for NXP Devices
 //   </e>
@@ -85,7 +85,7 @@
 #define USBD_POWER                  0
 #define USBD_MAX_PACKET0            64
 #define USBD_DEVDESC_IDVENDOR       0xC251
-#define USBD_DEVDESC_IDPRODUCT      0xF001
+#define USBD_DEVDESC_IDPRODUCT      0xF002
 #define USBD_DEVDESC_BCDDEVICE      0x0100
 
 //   <h> Configuration Settings
@@ -93,8 +93,8 @@
 //     <o0.5> Remote Wakeup
 //       <i> Configuration support for remote wakeup (D5: of bmAttributes)
 //     <o1.0..7> Maximum Power Consumption (in mA) <0-510><#/2>
-//       <i> Maximum power consumption of the USB device 
-//       <i> from the bus in this specific configuration 
+//       <i> Maximum power consumption of the USB device
+//       <i> from the bus in this specific configuration
 //       <i> when the device is fully operational (bMaxPower)
 //   </h>
 #define USBD_CFGDESC_BMATTRIBUTES   0x80
@@ -309,11 +309,11 @@
 //         <s0.126> Communication Class Interface String
 //         <s1.126> Data Class Interface String
 //         <o13> Maximum Communication Device Send Buffer Size
-//            <8=>     8 Bytes <16=>   16 Bytes <32=>     32 Bytes <64=>  64 Bytes <128=> 128 Bytes 
+//            <8=>     8 Bytes <16=>   16 Bytes <32=>     32 Bytes <64=>  64 Bytes <128=> 128 Bytes
 //            <256=> 256 Bytes <512=> 512 Bytes <1024=> 1024 Bytes
 //         <o14> Maximum Communication Device Receive Buffer Size
 //            <i> Minimum size must be as big as maximum packet size for Bulk Out Endpoint
-//            <8=>     8 Bytes <16=>   16 Bytes <32=>     32 Bytes <64=>  64 Bytes <128=> 128 Bytes 
+//            <8=>     8 Bytes <16=>   16 Bytes <32=>     32 Bytes <64=>  64 Bytes <128=> 128 Bytes
 //            <256=> 256 Bytes <512=> 512 Bytes <1024=> 1024 Bytes
 //       </h>
 //     </e>

@@ -310,7 +310,8 @@ __inline BOOL USBD_ReqGetDescriptor (void) {
             return (__FALSE);  /* High speed request but high-speed not enabled */
           }
           if (USBD_HighSpeed == __FALSE) {
-            USBD_EP0Data.pData = (U8 *)USBD_DeviceQualifier;
+            //USBD_EP0Data.pData = (U8 *)USBD_DeviceQualifier;   不支持的操作
+            return (__FALSE);
           } else {
             USBD_EP0Data.pData = (U8 *)USBD_DeviceQualifier_HS;
           }
@@ -321,7 +322,7 @@ __inline BOOL USBD_ReqGetDescriptor (void) {
             return (__FALSE);  /* High speed request but high-speed not enabled */
           }
           if (USBD_HighSpeed == __FALSE) {
-            pD = (U8 *)USBD_ConfigDescriptor;
+            pD = (U8 *)USBD_ConfigDescriptor;    // 报告描述符
           } else {
             pD = (U8 *)USBD_ConfigDescriptor_HS;
           }

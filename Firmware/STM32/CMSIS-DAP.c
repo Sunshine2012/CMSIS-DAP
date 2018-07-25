@@ -95,7 +95,7 @@ int main(void)
 	}
 	LedConnectedOff();
 
-	Delay_ms(10);
+	//Delay_ms(10);// 不要添加延时，否则上位机重试发送  a3 00 00 00 02 00 04 00 回 01 01 01 00
 
 	// USB Device Initialization and connect
 	usbd_init();
@@ -113,7 +113,7 @@ int main(void)
 		Delay_ms(10);
 	}
 	LedConnectedOff();
-	Delay_ms(100);				// Wait for 100ms
+	//Delay_ms(100);				// Wait for 100ms// 不要添加延时，否则上位机重试发送发送很多的东西
 
 	led_count = 0;
 	led_timeout = TIMEOUT_DELAY;
@@ -144,7 +144,7 @@ int main(void)
 				led_timeout = TIMEOUT_DELAY;
 			}
 			led_timeout--;
-			
+
 		}
 		else
 		{
@@ -274,7 +274,7 @@ const GPIO_InitTypeDef INIT_SWD_PINS = {
 	Configures the DAP Hardware I/O pins for Serial Wire Debug (SWD) mode:
 	 - SWCLK, SWDIO, nRESET to output mode and set to default high level.
 	 - TDI, TDO, nTRST to HighZ mode (pins are unused in SWD mode).
-*/ 
+*/
 void PORT_SWD_SETUP()
 {
 	PIN_SWCLK_TCK_PORT->BSRR = (PIN_SWCLK_TCK | PIN_SWDIO_TMS);
@@ -306,7 +306,7 @@ const GPIO_InitTypeDef INIT_JTAG_OUT = {
 	Configures the DAP Hardware I/O pins for JTAG mode:
 	- TCK, TMS, TDI, nTRST, nRESET to output mode and set to high level.
 	- TDO to input mode.
-*/ 
+*/
 void PORT_JTAG_SETUP()
 {
 	PIN_SWCLK_TCK_PORT->BSRR = PIN_SWCLK_TCK | PIN_SWDIO_TMS | PIN_TDI | PIN_TDO;
@@ -359,19 +359,19 @@ void NotifyOnStatusChange (void)
 		notify |= CDC_SERIAL_STATE_OVERRUN;
 	if (status & UART_FRAMING_ERROR_Msk)
 		notify |= CDC_SERIAL_STATE_FRAMING;
-	
-	status	= UART_GetStatusLineState();	
-	
+
+	status	= UART_GetStatusLineState();
+
 	if (status & UART_STATUS_LINE_RI_Msk )
 		notify |= CDC_SERIAL_STATE_RING;
 	if (status & UART_STATUS_LINE_DSR_Msk)
 		notify |= CDC_SERIAL_STATE_TX_CARRIER;
 	if (status & UART_STATUS_LINE_DCD_Msk)
 		notify |= CDC_SERIAL_STATE_RX_CARRIER;
-	
+
 	if (UART_GetBreak())
 		notify |= CDC_SERIAL_STATE_BREAK;
-	
+
 	if (notify ^ old_notify)				// If notify changed
 	{
 		if (USBD_CDC_ACM_Notify (notify))   // Send new notification
