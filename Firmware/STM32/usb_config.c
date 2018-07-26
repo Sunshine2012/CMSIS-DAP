@@ -82,10 +82,10 @@
 //     <o4.0..15> Device Release Number <0x0000-0xFFFF>
 //       <i> Device release number in binary-coded decimal (bcdDevice)
 //   </h>
-#define USBD_POWER                  0
+#define USBD_POWER                  1
 #define USBD_MAX_PACKET0            64
 #define USBD_DEVDESC_IDVENDOR       0xC251
-#define USBD_DEVDESC_IDPRODUCT      0xF002
+#define USBD_DEVDESC_IDPRODUCT      0xF001
 #define USBD_DEVDESC_BCDDEVICE      0x0100
 
 //   <h> Configuration Settings
@@ -116,7 +116,7 @@
 //     </e>
 //   </h>
 #define USBD_STRDESC_LANGID         0x0409
-#define USBD_STRDESC_MAN            L"X893 ARM"
+#define USBD_STRDESC_MAN            L"ELEAW"
 #define USBD_STRDESC_PROD           L"CMSIS-DAP"
 #define USBD_STRDESC_SER_ENABLE     1
 #define USBD_STRDESC_SER            L"0001A0000000"
@@ -206,7 +206,7 @@
 //         </h>
 //       </h>
 //     </e>
-#define USBD_MSC_ENABLE             1
+#define USBD_MSC_ENABLE             0
 #define USBD_MSC_EP_BULKIN          4
 #define USBD_MSC_EP_BULKOUT         4
 #define USBD_MSC_WMAXPACKETSIZE     64

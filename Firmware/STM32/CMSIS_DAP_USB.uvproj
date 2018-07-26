@@ -497,16 +497,6 @@
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
             </File>
-            <File>
-              <FileName>usbd_core_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
-            </File>
           </Files>
         </Group>
       </Groups>
@@ -1002,16 +992,6 @@
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
             </File>
-            <File>
-              <FileName>usbd_core_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
-            </File>
           </Files>
         </Group>
       </Groups>
@@ -1149,7 +1129,7 @@
             <RestoreTracepoints>1</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>7</TargetSelection>
+          <TargetSelection>14</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -1163,7 +1143,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
+            <Driver>BIN\CMSIS_AGDI.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -1506,16 +1486,6 @@
               <FileName>usbd_hid.c</FileName>
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_core_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2011,16 +1981,6 @@
               <FileName>usbd_hid.c</FileName>
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_core_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbd_msc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
             </File>
           </Files>
         </Group>
