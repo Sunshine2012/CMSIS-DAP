@@ -207,10 +207,10 @@
 //       </h>
 //     </e>
 #define USBD_MSC_ENABLE             0
-#define USBD_MSC_EP_BULKIN          2
-#define USBD_MSC_EP_BULKOUT         2
+#define USBD_MSC_EP_BULKIN          4
+#define USBD_MSC_EP_BULKOUT         4
 #define USBD_MSC_WMAXPACKETSIZE     64
-#define USBD_MSC_HS_ENABLE          0
+#define USBD_MSC_HS_ENABLE          1
 #define USBD_MSC_HS_WMAXPACKETSIZE  512
 #define USBD_MSC_HS_BINTERVAL       0
 #define USBD_MSC_STRDESC            L"USB_MSC"

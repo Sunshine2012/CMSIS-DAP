@@ -211,13 +211,13 @@ typedef enum Pin_e {
 #if   defined ( BOARD_V1 )	\
  ||   defined ( BOARD_V2 )
 
-	#define PIN_USB_CONNECT_RCC		RCC_APB2ENR_IOPAEN
-	#define PIN_USB_CONNECT_PORT    GPIOA
-	#define PIN_USB_CONNECT_PIN		8
+	#define PIN_USB_CONNECT_RCC		RCC_APB2ENR_IOPDEN
+	#define PIN_USB_CONNECT_PORT    GPIOD
+	#define PIN_USB_CONNECT_PIN		6
 	#define PIN_USB_CONNECT         PIN_MASK(PIN_USB_CONNECT_PIN)
 	#define PIN_USB_MODE			GPIO_Mode_Out_PP
-	#define PIN_USB_CONNECT_ON()	PIN_USB_CONNECT_PORT->BSRR = PIN_USB_CONNECT
-	#define PIN_USB_CONNECT_OFF()	PIN_USB_CONNECT_PORT->BRR  = PIN_USB_CONNECT
+	#define PIN_USB_CONNECT_ON()	PIN_USB_CONNECT_PORT->BRR = PIN_USB_CONNECT
+	#define PIN_USB_CONNECT_OFF()	PIN_USB_CONNECT_PORT->BSRR  = PIN_USB_CONNECT
 
 #elif defined ( STLINK_V20 )
 
@@ -338,11 +338,11 @@ typedef enum Pin_e {
 
 	// Connected LED (GREEN)
 	#define LED_CONNECTED_PORT      GPIOB
-	#define LED_CONNECTED_PIN		13
+	#define LED_CONNECTED_PIN		0
 
 	// Target Running LED (RED)
 	#define LED_RUNNING_PORT		GPIOB
-	#define LED_RUNNING_PIN			12
+	#define LED_RUNNING_PIN			5
 
 #elif defined ( STLINK_V20 )
 
