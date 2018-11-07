@@ -15,7 +15,7 @@
  */
 #include <RTL.h>
 #include <rl_usb.h>
-#include <..\..\RL\USB\INC\usb.h>
+#include "usb.h"
 
 #pragma thumb
 #pragma O3
@@ -1735,10 +1735,15 @@ const U8 USBD_ConfigDescriptor[] = {
   ADC_EP
 #endif
 
-#if (USBD_MSC_ENABLE)
-  MSC_DESC
-  MSC_EP
+#if (USBD_HID_ENABLE)
+    HID_DESC
+#if (USBD_HID_EP_INTOUT != 0)
+    HID_EP_INOUT
+#else
+    HID_EP
 #endif
+#endif
+
 
 #if (USBD_CDC_ACM_ENABLE)
 #if (USBD_MULTI_IF)
@@ -1750,13 +1755,9 @@ const U8 USBD_ConfigDescriptor[] = {
   CDC_ACM_EP_IF1
 #endif
 
-#if (USBD_HID_ENABLE)
-  HID_DESC
-#if (USBD_HID_EP_INTOUT != 0)
-  HID_EP_INOUT
-#else
-  HID_EP
-#endif
+#if (USBD_MSC_ENABLE)
+  MSC_DESC
+  MSC_EP
 #endif
 
 
@@ -1796,6 +1797,15 @@ const U8 USBD_ConfigDescriptor_HS[] = {
   ADC_EP_HS
 #endif
 
+#if (USBD_HID_ENABLE)
+    HID_DESC
+#if (USBD_HID_EP_INTOUT != 0)
+    HID_EP_INOUT_HS
+#else
+    HID_EP_HS
+#endif
+#endif
+
 #if (USBD_CDC_ACM_ENABLE)
 #if (USBD_MULTI_IF)
   CDC_ACM_DESC_IAD(USBD_CDC_ACM_CIF_NUM,2)
@@ -1806,14 +1816,6 @@ const U8 USBD_ConfigDescriptor_HS[] = {
   CDC_ACM_EP_IF1_HS
 #endif
 
-#if (USBD_HID_ENABLE)
-  HID_DESC
-#if (USBD_HID_EP_INTOUT != 0)
-  HID_EP_INOUT_HS
-#else
-  HID_EP_HS
-#endif
-#endif
 
 #if (USBD_MSC_ENABLE)
   MSC_DESC
@@ -1847,6 +1849,15 @@ const U8 USBD_OtherSpeedConfigDescriptor[] = {
   ADC_EP_HS
 #endif
 
+#if (USBD_HID_ENABLE)
+    HID_DESC
+#if (USBD_HID_EP_INTOUT != 0)
+    HID_EP_INOUT_HS
+#else
+    HID_EP_HS
+#endif
+#endif
+
 #if (USBD_CDC_ACM_ENABLE)
 #if (USBD_MULTI_IF)
   CDC_ACM_DESC_IAD(USBD_CDC_ACM_CIF_NUM,2)
@@ -1857,14 +1868,6 @@ const U8 USBD_OtherSpeedConfigDescriptor[] = {
   CDC_ACM_EP_IF1_HS
 #endif
 
-#if (USBD_HID_ENABLE)
-  HID_DESC
-#if (USBD_HID_EP_INTOUT != 0)
-  HID_EP_INOUT_HS
-#else
-  HID_EP_HS
-#endif
-#endif
 
 #if (USBD_MSC_ENABLE)
   MSC_DESC
@@ -1898,6 +1901,15 @@ const U8 USBD_OtherSpeedConfigDescriptor_HS[] = {
   ADC_EP
 #endif
 
+#if (USBD_HID_ENABLE)
+    HID_DESC
+#if (USBD_HID_EP_INTOUT != 0)
+    HID_EP_INOUT
+#else
+    HID_EP
+#endif
+#endif
+
 #if (USBD_CDC_ACM_ENABLE)
 #if (USBD_MULTI_IF)
   CDC_ACM_DESC_IAD(USBD_CDC_ACM_CIF_NUM,2)
@@ -1908,14 +1920,7 @@ const U8 USBD_OtherSpeedConfigDescriptor_HS[] = {
   CDC_ACM_EP_IF1
 #endif
 
-#if (USBD_HID_ENABLE)
-  HID_DESC
-#if (USBD_HID_EP_INTOUT != 0)
-  HID_EP_INOUT
-#else
-  HID_EP
-#endif
-#endif
+
 
 #if (USBD_MSC_ENABLE)
   MSC_DESC
@@ -1955,13 +1960,14 @@ const struct {
   USBD_STR_DEF(ADC_SIF1_STRDESC);
   USBD_STR_DEF(ADC_SIF2_STRDESC);
 #endif
+#if (USBD_HID_ENABLE)
+  USBD_STR_DEF(HID_STRDESC);
+#endif
 #if (USBD_CDC_ACM_ENABLE)
   USBD_STR_DEF(CDC_ACM_CIF_STRDESC);
   USBD_STR_DEF(CDC_ACM_DIF_STRDESC);
 #endif
-#if (USBD_HID_ENABLE)
-  USBD_STR_DEF(HID_STRDESC);
-#endif
+
 #if (USBD_MSC_ENABLE)
   USBD_STR_DEF(MSC_STRDESC);
 #endif
@@ -1979,12 +1985,12 @@ const struct {
   USBD_STR_VAL(ADC_SIF1_STRDESC),
   USBD_STR_VAL(ADC_SIF2_STRDESC),
 #endif
+#if (USBD_HID_ENABLE)
+    USBD_STR_VAL(HID_STRDESC),
+#endif
 #if (USBD_CDC_ACM_ENABLE)
   USBD_STR_VAL(CDC_ACM_CIF_STRDESC),
   USBD_STR_VAL(CDC_ACM_DIF_STRDESC),
-#endif
-#if (USBD_HID_ENABLE)
-  USBD_STR_VAL(HID_STRDESC),
 #endif
 #if (USBD_MSC_ENABLE)
   USBD_STR_VAL(MSC_STRDESC),

@@ -30,6 +30,7 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile>SFD\ST\STM32F1xx\STM32F102xx.sfr</SFDFile>
+          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -71,6 +72,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopB1X>0</nStopB1X>
+            <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
@@ -97,6 +100,7 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
+          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
@@ -126,6 +130,7 @@
             <RestoreFunctions>1</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
+            <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
             <UseTarget>1</UseTarget>
@@ -137,6 +142,7 @@
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>7</TargetSelection>
@@ -169,6 +175,10 @@
           <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3></Flash3>
           <Flash4></Flash4>
+          <pFcarmOut></pFcarmOut>
+          <pFcarmGrp></pFcarmGrp>
+          <pFcArmRoot></pFcArmRoot>
+          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -347,6 +357,8 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
+            <uC99>0</uC99>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V1 STM32F102CB</Define>
@@ -363,6 +375,7 @@
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -379,6 +392,7 @@
             <useFile>0</useFile>
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
+            <pXoBase></pXoBase>
             <ScatterFile>.\CMSIS_DAP.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
@@ -497,6 +511,21 @@
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
             </File>
+            <File>
+              <FileName>usbd_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_core_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\inc\usb_lib.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -525,6 +554,7 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile>SFD\ST\STM32F1xx\STM32F103xx.sfr</SFDFile>
+          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -566,6 +596,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopB1X>0</nStopB1X>
+            <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
@@ -592,6 +624,7 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
+          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
@@ -621,6 +654,7 @@
             <RestoreFunctions>1</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
+            <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
             <UseTarget>1</UseTarget>
@@ -632,6 +666,7 @@
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>6</TargetSelection>
@@ -664,6 +699,10 @@
           <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3></Flash3>
           <Flash4></Flash4>
+          <pFcarmOut></pFcarmOut>
+          <pFcarmGrp></pFcarmGrp>
+          <pFcArmRoot></pFcArmRoot>
+          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -842,6 +881,8 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
+            <uC99>0</uC99>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V1</Define>
@@ -858,6 +899,7 @@
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -874,6 +916,7 @@
             <useFile>0</useFile>
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
+            <pXoBase></pXoBase>
             <ScatterFile>.\CMSIS_DAP.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
@@ -992,6 +1035,21 @@
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
             </File>
+            <File>
+              <FileName>usbd_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_core_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\inc\usb_lib.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -1020,6 +1078,7 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile>SFD\ST\STM32F1xx\STM32F103xx.sfrSVD=SFD\ST\STM32F1xx\STM32F103xx.sfr</SFDFile>
+          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -1061,6 +1120,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopB1X>0</nStopB1X>
+            <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
@@ -1087,6 +1148,7 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
+          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
@@ -1116,6 +1178,7 @@
             <RestoreFunctions>1</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
+            <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
             <UseTarget>1</UseTarget>
@@ -1127,9 +1190,10 @@
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>14</TargetSelection>
+          <TargetSelection>12</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -1159,6 +1223,10 @@
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
+          <pFcarmOut></pFcarmOut>
+          <pFcarmGrp></pFcarmGrp>
+          <pFcArmRoot></pFcArmRoot>
+          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -1337,11 +1405,13 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
+            <uC99>0</uC99>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_V2</Define>
               <Undefine></Undefine>
-              <IncludePath>.;.\STM32F10x_StdPeriph_Driver\inc;.\USBStack\inc</IncludePath>
+              <IncludePath>.;.\STM32F10x_StdPeriph_Driver\inc;.\USBStack\inc;.\CMSIS\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1353,6 +1423,7 @@
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1369,6 +1440,7 @@
             <useFile>0</useFile>
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
+            <pXoBase></pXoBase>
             <ScatterFile>.\CMSIS_DAP-C8.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
@@ -1487,6 +1559,21 @@
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
             </File>
+            <File>
+              <FileName>usbd_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_core_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\inc\usb_lib.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -1515,6 +1602,7 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile>SFD\ST\STM32F1xx\STM32F103xx.sfrSVD=SFD\ST\STM32F1xx\STM32F103xx.sfr</SFDFile>
+          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -1556,6 +1644,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopB1X>0</nStopB1X>
+            <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
@@ -1582,6 +1672,7 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
+          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
@@ -1611,6 +1702,7 @@
             <RestoreFunctions>1</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
+            <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
             <UseTarget>1</UseTarget>
@@ -1622,6 +1714,7 @@
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>12</TargetSelection>
@@ -1654,6 +1747,10 @@
           <Flash2>BIN\CMSIS_AGDI.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
+          <pFcarmOut></pFcarmOut>
+          <pFcarmGrp></pFcarmGrp>
+          <pFcArmRoot></pFcArmRoot>
+          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -1832,6 +1929,8 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
+            <uC99>0</uC99>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER STM32F10X_MD BOARD_STM32RF</Define>
@@ -1848,6 +1947,7 @@
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1864,6 +1964,7 @@
             <useFile>0</useFile>
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
+            <pXoBase></pXoBase>
             <ScatterFile>.\CMSIS_DAP.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
@@ -1981,6 +2082,21 @@
               <FileName>usbd_hid.c</FileName>
               <FileType>1</FileType>
               <FilePath>USBStack\src\usbd_hid.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_core_msc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\src\usbd_core_msc.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBStack\inc\usb_lib.c</FilePath>
             </File>
           </Files>
         </Group>
